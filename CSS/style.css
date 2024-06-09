@@ -1,0 +1,136 @@
+/*
+*{
+in *{} whatever style we use will be set to all the html elements
+}
+*/
+body{
+	background-color:#f4f4f4;
+	color:#555555;
+	font-family: Arial, Helvetica, sans-serif; /*incase it cannot load arial it will try to load the others*/
+    font-size:16px;
+    font-weight: normal;  /*we can also type bold or numbers like 400 to set the level of bold*/
+     font: normal 16px Arial, Helvetica, sans-serif;
+    /* same as above but a shorter form
+    */
+     line-height:1.6em; /*spacing between lines*/
+     /*Difference in class and id
+       class can be used for different things but ids are unique 
+     */
+ }
+ a{  /*will apply to all links*/
+ 	text-decoration: none;  /*to remove underline*/
+ 	color: #000000;
+ }
+
+ a:hover{
+ 	color:red;
+ }
+
+ a:active{
+ 	color:green;
+ }
+
+ a:visited{
+/* 	color:black;*/
+ }
+
+ .container{
+ 	width:80%; /*if we use a value like 400px it wont be responsive, but if we use percetnage it will be responsive*/
+ 	margin: auto;
+ }
+ .box-1{  /*to access a class use dot notation*/
+ 	background-color: #333333;
+ 	color:#ffffff;
+
+ 	/* border-right: 5px red solid;
+ 	border-left: 5px red solid;
+ 	border-top: 5px red solid;
+ 	border-bottom: 5px red solid; */
+
+ 	/* same as */
+ 	border: 5px red solid;
+ 	border-width:3px;
+ 	border-bottom-width: 10px;
+ 	border-top-style: dotted;
+
+ 	padding:20px;
+
+ 	margin: 20px 0;
+ } 
+
+.box-1 h1{  /*we are targetting all h1s only in the box-1 class*/
+         font-family: Tahoma;
+         font-weight: 800;
+         font-style: italic;
+         text-decoration: underline;
+         text-transform: uppercase;
+         letter-spacing: 0.2em;
+         word-spacing: 1em;
+
+}
+.box-2{
+	border: 3px dotted #cccccc;
+	padding: 20px;
+	margin: 20px 0;
+}
+.categories{
+	margin: 20px;
+	border: 1px #cccccc solid;
+	padding: 10px;
+	border-radius: 15px;
+}
+
+.clr{
+	clear:both;
+}
+
+.categories h2{
+	text-align: center;
+}
+
+.categories ul{
+	padding: 0;
+	padding-left: 20px;
+	list-style: sqsuare;
+	list-style: none;
+}
+.categories li{
+	padding-bottom:8px;
+	border-bottom:dotted 1px #333333;
+	/*list-style-image: url('../CSS/images/check.png'); */
+}
+
+.my-form{
+	padding: 20px;
+}
+.my-form.form-group{
+	padding-bottom: 15px;
+}
+
+.my-form label{
+	display: block; /*to make the name of the form and the box in next line. They appear in the same line by default since form tags are inline by default*/
+}
+.my-form input[type="text"], .my-form textarea{
+	padding: 8px;
+	width: 100%;
+}
+.button{
+	background-color: #333333;
+	color: #fff;
+	padding: 10px 15px;
+	border: none;
+}
+.button:hover{
+	background-color: red;
+	color: #fff;
+}
+
+.block{
+	float: left;
+	width: 33.3%;
+	border: 1px solid #ccc;
+	padding: 10px;
+	/*only doing till here will not allow all the divs to be in the same horizontal line*/
+	/*The fis is the following*/
+	box-sizing:border-box; /*this will make the padding and margin set accordingly*/
+}

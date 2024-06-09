@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+     <head>
+     	  <title>HTML Cheat Sheet</title>
+     </head>
+     <body>
+     	<!-- (This is how we write comments) Headings -->
+     	<h1> Heading One</h1>
+     	<h2>Heading two</h2>
+     	<h3>Heading three</h3>
+     	<h4>Heading four</h4>
+     	<h5>Heading five</h5>
+     	<h6>Heading six</h6>
+
+     	<!--Paragraph -->
+     	<p>
+     	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+     	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+     	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+     	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+     	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+     	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+     	</p>
+     	<!--paragraphs have margin-->
+     	<p>
+     		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+     		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+     		<!--by default srong tag makes the text inside bold but we can change the way we want to make it strong using CSS-->
+     		<strong>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</strong>
+     		consequat. 
+            <!--by default em tag changes text to italic but we can change it's function using CSS-->
+     		<em>Duis aute irure dolor in reprehenderit in voluptate velit esse</em>
+     		<!--link tag has an attribute href with which we can set a link to the text under the tag
+     			if you add target attirbute with _blank value it will open the link in a new tab without letting the user leave the website-->
+     		<a href = "https://google.com" target = "_blank">cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non</a>
+     		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+     	</p>
+
+        <!--Lists used generally fr-or nav bars on top of websites-->
+        <ul>
+        	<li> List Item 1</li>  <!--List items have bullets since this us a unordered list-->
+        	<li> List Item 2</li>
+        	<li> List Item 3</li>
+        	<li> List Item 4</li>
+        </ul>
+        <ol>
+        	<li> List Item 1</li>  <!--List items have number since this a ordered list-->
+        	<li> List Item 2</li>
+        	<li> List Item 3</li>
+        	<li> List Item 4</li>
+        </ol>
+        <!---Table-->
+        <table>
+        	<thead>
+               <tr>
+               	<th>Name</th>
+               	<th>Email</th>
+               	<th>Age</th>
+               </tr>
+        	</thead>
+        	<tbody>
+        		<tr>
+        			<td>Brad Traversy</td>
+        			<td>brad@something.com</td>
+        			<td>35</td>
+        		</tr>
+        		<tr>
+        			<td>XYZ</td>
+        			<td>XYZ@something.com</td>
+        			<td>34</td>
+        		</tr>
+        	</tbody>
+        </table>
+
+        <br>  <!--seperates things-->
+        <hr>  <!--makes a horizontal line in the webpage-->
+        <br>
+
+        <!--Forms-->
+        <!--action attribute will submit the form to a certain page-->
+        <!--method attribute will send requests like POST or GET to the database-->
+        <form action ="process.php" method="POST">
+        	<div> <!--since label is a inline element and we want the next label to come below this we will put both of them in div-->
+        	<label>First Name</label>
+        	<input type="text" name="firstName" placeholder = "Enter first name"> <!--name attribute will tell how to grab the value in th form for backend purposes-->
+            </div>
+            <br>  <!--dont do this normally use CSS to give padding-->
+            <div>
+        	<label>Last Name</label>
+        	<input type="text" name="lastName"> 
+        </div>
+        <br>
+        <div>
+        	<label>Email</label>
+        	<input type="email" name="email"> <!--if we use the type email the form will only accept valid emails-->
+        </div>
+        <br>
+        <div>
+        	<label>Message</label>
+        	<textarea name = "message"></textarea> <!--text area will give  text box where user can type his text and he can expand it also-->
+        </div>
+        <br>
+        <div>
+        	<label>Gender</label>
+        	<select name = "gender">
+        		<option value = "male">Male</option>
+        		<option value = "female">Female</option>
+        		<option value = "other">Other</option>
+        	</select>
+        </div>
+        <br>
+        <div>
+        <label>Age</label>
+        	<input type="number" name="age" value = "30"> <!--value is setting a predefined value to this input-->
+        	<!--instead of value if we use the placeholder attribute the default text will be greyed out and when the user starts entering it will disappear
+            But, when we use the value attribute they user needs to remove the default input manually which is not desirable-->
+            </div>
+            <br>  
+            <div>
+        	<label>Birthday: </label>
+        	<input type="date" name="birthday"> <!--type date will give us a date field on the webpage-->
+        </div>
+        <br>
+         <input type="submit" name="submit" value="Submit"> <!--this will submit to process.php the dummy php file we put here-->
+        </form>	
+        <br>
+        <!--Button-->
+        <button>Click Me</button>
+        <br>
+        <img src="Sample Images/sample_image.jpg" alt="My Sample Image" width="200"> <!--by default the img tages searches in the root folder that is the folder in which index.html is there but if we have it inside other folder inside the root folder then we need to mention the location.
+        	If it is in the root folder then we just need to give the name.filetype
+        	The alt attribute will make the text inside it to be displayed if html cannot find the image. -->
+
+        	<!--Quotations-->
+        	<blockquote cite = "http://google.com"> <!---cite attribute takes the citation of the quote typed-->
+        	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote>
+
+        	<p>The <abbr title = "World Wide Web">WWW</abbr> is awesome</p>
+        	<!--the abbr tag is abbrevation tag the abbrevation of word inside the tage will be shown if we move the mouse over it in the webpage-->
+        	<p><cite ="https://google.com">this is cited from google</cite></p>
+        	<!--cite tag makes the text inside it italic and informs the browser that it has been cited from the source provided-->
+     </body>
+</html>
